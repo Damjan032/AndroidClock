@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <link.clock.ClockView
+        android:id="@+id/clockView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginBottom="185dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etHours" />
+
+    <CheckBox
+        android:id="@+id/rbAuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="114dp"
+        android:layout_marginLeft="114dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginBottom="54dp"
+
+        android:checked="true"
+        android:onClick="rbClick"
+        android:text="Auto time"
+        app:layout_constraintBottom_toTopOf="@+id/etHours"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etHours"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginRight="41dp"
+        android:layout_marginBottom="57dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:maxLength="2"
+        android:text="12"
+        app:layout_constraintBottom_toTopOf="@+id/clockView"
+        app:layout_constraintEnd_toStartOf="@+id/etMin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbAuto" />
+
+    <EditText
+        android:id="@+id/etMin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="134dp"
+        android:layout_marginRight="134dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:maxLength="2"
+        android:text="00"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etHours"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etHours" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Minutes:"
+        app:layout_constraintBottom_toTopOf="@+id/etMin"
+        app:layout_constraintStart_toStartOf="@+id/etMin" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hours:"
+        app:layout_constraintBottom_toTopOf="@+id/etHours"
+        app:layout_constraintStart_toStartOf="@+id/etHours" />
+
+</android.support.constraint.ConstraintLayout>
