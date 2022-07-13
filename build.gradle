@@ -15,18 +15,6 @@ buildscript {
     }
 }
 
-plugins {
-  id "org.sonarqube" version "3.4.0.2513"
-}
-
-sonarqube {
-  properties {
-    property "sonar.projectKey", "Damjan032_AndroidClock"
-    property "sonar.organization", "damjan032"
-    property "sonar.host.url", "https://sonarcloud.io"
-  }
-}
-
 allprojects {
     repositories {
         google()
